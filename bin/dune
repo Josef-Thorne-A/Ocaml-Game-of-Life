@@ -1,0 +1,5 @@
+(executable
+ (public_name life)
+ (name main)
+ (libraries life gui graphics)
+(modes byte exe))
