@@ -1,5 +1,5 @@
 (executable
- (public_name life)
  (name main)
- (libraries life gui graphics)
-(modes byte exe))
+ (public_name life)
+ (modules main)
+ (libraries life gui graphics))

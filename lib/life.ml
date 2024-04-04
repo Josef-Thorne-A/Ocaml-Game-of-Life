@@ -47,11 +47,11 @@ let next_cell_state board k m =
   | Dead -> if count = 3 then Live else Dead
 
 let update_cell k m board next_board =
-  let () = print_string "\nboard: "; print_board board in
+  (* let () = print_string "\nboard: "; print_board board in *)
   Board.add k (next_cell_state board k m) next_board
 
 let update_existing_cell board next_board neighbor =
-  let () = print_string "\nboard: "; print_board board in
+  (* let () = print_string "\nboard: "; print_board board in *)
   try let current_state = Board.find neighbor board in
     update_cell neighbor current_state board next_board
   (* Don´t add a Dead node if it didn´t already exist or the grid will grow infinitely *)
@@ -66,7 +66,7 @@ let step_board board =
     neighbors k |> List.fold_left (update_existing_cell board) next_board in
   let update_neighbors_and_cell = fun k m next_board ->
     let res = update_neighbors k m next_board |> update_cell k m board in
-    let () = print_string "next_board: "; print_board res; print_string "\n" in res
+    (* let () = print_string "next_board: "; print_board res; print_string "\n" in  *)res
   in
   Board.fold update_neighbors_and_cell board Board.empty
 

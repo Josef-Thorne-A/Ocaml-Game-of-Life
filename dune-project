@@ -1,4 +1,4 @@
-(lang dune 3.14)
+(lang dune 2.9)
 
 (name life)
 
@@ -12,9 +12,7 @@
 (maintainers "Maintainer Name")
 
 (license LICENSE)
-
 (documentation https://url/to/documentation)
-(wrapped_executables false)
 (package
  (name life)
  (synopsis "A short synopsis")

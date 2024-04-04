@@ -1,5 +1,6 @@
 (library
  (name life)
  (public_name life) (modules Life))
+
 (library
 (name gui) (modules gui) (libraries graphics life))
